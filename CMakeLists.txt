@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.8)
 project(fmodbuild CXX C)
 
 add_library(fmodbuild INTERFACE)
-target_include_directories(fmodbuild INTERFACE "inc")
+target_include_directories(fmodbuild INTERFACE "inc" "inc/core" "inc/fsbank" "inc/studio")
 
 if (CMAKE_SYSTEM_NAME MATCHES Emscripten)
     target_link_directories(fmodbuild INTERFACE "lib/emscripten")
